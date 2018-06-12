@@ -1,0 +1,34 @@
+<template name="tabBar">
+  <view class="tabBar" wx:if='{{tabBar.showTabBar}}'>
+    <block wx:for="{{tabBar.tabBar}}" wx:for-item="item" wx:key="tabBar">
+      <view class="tabBar-item">
+        <view class='tabBar-item-nav' bindtap='showActionSheet' wx:if="{{item.type =='actionSheet'}}">
+          <view>
+            <image class="icon" src='{{item.iconPath}}' class='tarBar-record'></image>
+          </view>
+          <view class="{{item.current== 1 ? 'tabBartext' :''}}"> </view>
+        </view>
+        <view bindtap='bindSwitchTabbar' data-current="{{item.current}}" data-url="{{item.pagePath}}" class='tabBar-item-nav' hover-class="none" wx:else>
+          <view>
+            <image class="icon" src='{{item.iconPath}}'></image>
+          </view>
+          <text class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</text>
+        </view>
+      </view>
+    </block>
+    <action-sheet hidden="{{!tabBar.actionSheetHidden}}" bindchange="actionSheetChange" style="positon:fixed">
+      <view class="action-sheet-bar">
+        <navigator wx:for="{{tabBar.actionSheetData}}" wx:for-item="item" wx:key="tabBar" class="action-sheet-item" open-type="navigate" 
+        url="{{item.pagePath}}" hover-class="none">
+          <view>
+            <image src='{{item.iconPath}}'></image>
+          </view>
+          <text>{{item.text}}</text>
+        </navigator>
+      </view>
+      <action-sheet-cancel class='action-sheet-cancel'>取消{{bonusNum}}</action-sheet-cancel>
+    </action-sheet>
+
+  </view>
+  
+</template>

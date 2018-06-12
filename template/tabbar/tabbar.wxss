@@ -1,0 +1,95 @@
+.icon{
+  width:46rpx;
+  height: 46rpx;
+}
+.tabBar{
+  width:100%;
+  position: fixed;
+  bottom:0;
+  background:#fff;
+  font-size:20rpx;
+  color:#666;
+  border-top:1rpx solid #f7f7f7;
+  display: flex;
+  align-items: center;
+  height: 88rpx;
+   z-index: 100;
+
+}
+.tabBar-item{
+  width:50%;
+  text-align: center;
+  overflow: hidden;
+  height:100rpx;
+}
+.tabBar-item-nav{
+  padding-top:9rpx;
+}
+.tabBar-item-nav text{
+	font-family: PingFang-SC-Medium;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #999999;
+}
+/*当前字体颜色*/
+.tabBartext{
+  color:#fb8699 !important;
+}
+.action-sheet-text{
+position:relative;
+width:100%;
+text-align:center;
+color:#999999;
+font-size:30rpx;
+padding-top:20rpx;
+margin-bottom:280rpx;
+display:block;
+
+}
+.action-sheet-bar{
+  width:100%;
+  bottom:0;
+  background:#fff;
+  font-size:20rpx;
+  color:#666;
+  display:flex;
+  align-items:center;
+  position:fixed;
+  padding-bottom:70px;
+}
+.action-sheet-item{
+  width:50%;
+  text-align: center;
+  overflow: hidden;
+  padding-top:50rpx;
+}
+.action-sheet-bar image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.action-sheet-item text{
+  font-size: 25rpx;
+  font-family: PingFang-SC-Regular;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 0px;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.tarBar-record{
+  width: 75rpx;
+  height:75rpx;
+}
+
+.action-sheet-cancel{
+  font-family: PingFang-SC-Medium;
+	font-size: 36rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+  background-color:#f7f7f7;
+}
